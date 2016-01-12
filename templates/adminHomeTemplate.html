@@ -1,0 +1,88 @@
+<!-- Header Title -->
+<div class="row header-name">
+    <div class="col-md-3 col sm-3 col-xs-3">
+        <img class="hidden-sm hidden-xs" height="45px" width="45px" src="images/logo.png" alt="logo"/>
+        <img class="hidden-md hidden-lg" height="40px" width="40px" src="images/logo.png" alt="logo"/>
+        <a class="link" href="#home">Go to Main Site</a>
+    </div>
+    <div class="col-md-6 col sm-6 col-xs-6">
+        <h2 class="header-title-sm hidden-sm hidden-xs">The Fire Drill <small>Admin Mode</small></h2>
+        <h3 class="header-title-sm hidden-md hidden-lg">The Fire Drill <small>Admin Mode</small></h3>
+    </div>
+    <div class="col-sm-3 col-xs-3">
+        <button type="button" id="signout-mobile" class="btn hidden-md hidden-lg">Logout</button>
+    </div>
+    <div class="col-sm-3 col-xs-3">
+        <button type="button" id="signout-desktop" class="btn hidden-xs hidden-sm">Logout</button>
+    </div>
+</div>
+
+<!-- Header Navigational Bar -->
+<div class="row navigational-bar">
+    <div class="col-xs-12">
+        <h5>
+            <a class="navigational-bar-link" id="post-story">Post a Story</a>
+        </h5>
+    </div>
+</div>
+
+<div class="admin-home">
+	<div class="row">
+		<form id="article-form" method="post" class="form-horizontal">
+			<div class="form-group headline">
+		    	<label for="headline" class="col-xs-2 control-label">Headline</label>
+		    	<div class="col-xs-9">
+		      		<input type="text" class="form-control" id="headline" placeholder="Headline">
+		    	</div>
+		    	<div class="col-xs-1">
+		    	</div>
+		  	</div>
+		  	<div class="form-group story">
+		    	<label for="story" class="col-xs-2 control-label">Story</label>
+		    	<div class="col-xs-9">
+		    		<textarea type="text" id="story" placeholder="Post a Story" class="form-control" rows="20"></textarea>
+		    	</div>
+		    	<div class="col-xs-1"></div>
+		  	</div>
+		  	<div class="form-group tag" id="tag">
+			    <label for="column-number" class="col-xs-2 control-label">Tags:</label>
+			        <div class="col-xs-9">
+					    <input type="text" class="form-control" id="tag-input" placeholder="One word each, separated by commas."></input>
+			            <p class="help-block">Popular tags: US, stocks, oil, world, China, commodities, Chipotle, etc...</p>
+			        </div>
+				    <div class="col-xs-1"></div>
+			</div>
+			<div class="form-group" id="upload-image">
+				<label for="image" class="col-xs-2 control-label">Select Image (optional)</label>
+				<div class="col-xs-9">
+					<input id="image" name="image" type="file" class="file-upload">
+					<p class="help-block">Please insert a .png file. Note: file will be cropped to X by X pixels</p>
+				</div>
+				<div class="col-xs-1"></div>
+			</div>
+			<div class="form-group" id="add-chart-radio">
+				<label class="col-xs-2 control-label">Add Stock Price Chart</label>
+				<div class="col-xs-9">
+					<input id="ticker" class="form-control" type="text" name="ticker" Placeholder="Symbol"></input>
+					<p class="help-block">For index, use symbol from Yahoo Finance. DJIA not available.</p>
+					<input id="from-date" class="form-control" type="text" name="from-date" Placeholder="Data since..."></input>
+					<p class="help-block">Must use format: "yyyy-mm-dd". Will generate chart from specified date until last close.</p>
+				</div>
+				<div class="col-xs-1"></div>
+			</div>
+			<div class="form-group" id="add-chart-radio">
+				<label for="chart" class="col-xs-2 control-label">Add a T-Chart (optional)</label>
+				<div class="col-xs-9">
+					<label class="radio-inline"><input id="add-chart" type="radio" name="optradio">Yes</label>
+					<label class="radio-inline"><input id="remove-chart" type="radio" name="optradio">No</label>
+				</div>
+				<div class="col-xs-1"></div>
+			</div>
+		  	<div class="form-group" id="submit-form-button-group">
+		    	<div class="col-xs-12 centered">
+		      		<button type="submit">Submit</button>
+		    	</div>
+			</div>
+		</form>
+	</div>
+</div>
